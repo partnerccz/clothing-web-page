@@ -5,9 +5,9 @@
         <img :src="product.img" width="80" height="80"/>
       </div>
       <div class="product-item-right">
-        <div>{{product.name}}</div>
-        <div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span
-          style="color:#999;">销量: {{product.total_sell_num}} </span><span><img src="../../images/footer-icon/myIcon0.png" width="25"
+        <div  style="margin-top:5px; ">{{product.pName}}</div>
+        <div style="margin-top:10px; "><span style="color:red;">￥{{product.sell_price}}</span> <span
+          style="color:#999;">销量: {{product.total_sell_num}} </span><span style="position: absolute; right: 30px;"><img src="../../images/order/buy-car-2.png" width="25"
                                                           height="25"/></span></div>
       </div>
     </div>
