@@ -3,7 +3,7 @@
     <mt-tab-container class="page-tabbar-container" v-model="selected">
       <mt-tab-container-item id="home2">
         <search style="margin-bottom: 5px;"></search>
-        <slide></slide>
+        <slide :banners="banners"></slide>
         <classify></classify>
         <product-item></product-item>
       </mt-tab-container-item>
@@ -57,8 +57,20 @@ export default {
   },
   data: function () {
     return {
-      selected: 'home2'
+      selected: 'home2',
+      banners: {}
     }
+  },
+  methods: {
+    getBanner: function () {
+      this.$http.post('/banner/getBanners', {groupKey: 'GROUP_HOME'}).then((response) => {
+        console.log(response)
+        this.banners = response.data
+      })
+    }
+  },
+  mounted: function () {
+    this.getBanner()
   }
 }
 </script>

@@ -3,18 +3,31 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+var devConfig = require('./dev.env')
+var prodConfig = require('./prod.env')
 
 module.exports = {
   dev: {
-
+    env: require('./dev.env'),
+    port: devConfig.DEV_PORT,
+    host: devConfig.DEV_HOST,
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api': {
+        target: devConfig.BACKEND_SERVER,
+        // target: process.env.BACKEND_SERVER, // 不能使用这种方式，获取不到变量
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    // host: 'localhost', // can be overwritten by process.env.HOST
+    // port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -44,11 +57,14 @@ module.exports = {
   },
 
   build: {
+    env: require('./prod.env'),
+    index: prodConfig.BUILD_PATH + '/index.html',
+    assetsRoot: prodConfig.BUILD_PATH,
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
-
-    // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    // index: path.resolve(__dirname, '../dist/index.html'),
+    //
+    // // Paths
+    // assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
 
