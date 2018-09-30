@@ -5,7 +5,7 @@
         <search style="margin-bottom: 5px;"></search>
         <slide :banners="banners"></slide>
         <classify></classify>
-        <product-item></product-item>
+        <product-item :product="product" v-for="product in products" :key="product.id"></product-item>
       </mt-tab-container-item>
       <mt-tab-container-item id="buyCar">
         byCfasdfa
@@ -58,7 +58,8 @@ export default {
   data: function () {
     return {
       selected: 'home2',
-      banners: {}
+      banners: {},
+      products: []
     }
   },
   methods: {
@@ -67,10 +68,17 @@ export default {
         console.log(response)
         this.banners = response.data
       })
+    },
+    getProducts: function () {
+      this.$http.post('/product/getProductPage', {pageSize: 10, pageNum: 1}).then((response) => {
+        console.log(response)
+        this.products = response.data.list
+      })
     }
   },
   mounted: function () {
     this.getBanner()
+    this.getProducts()
   }
 }
 </script>

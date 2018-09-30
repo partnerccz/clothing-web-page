@@ -2,65 +2,66 @@
   <div>
     <div  class="product-item">
       <div class="product-item-left">
-        <img src="../../images/classify/classify01.jpg" width="80" height="80"/>
+        <img :src="product.img" width="80" height="80"/>
       </div>
       <div class="product-item-right">
-        <div>dressbook韩国创意家用懒人叠衣板成人儿童衣服收纳神器防皱衬衣</div>
+        <div>{{product.name}}</div>
         <div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span
-          style="color:#999;">销量: 22174 </span><span><img src="../../images/footer-icon/myIcon0.png" width="25"
+          style="color:#999;">销量: {{product.total_sell_num}} </span><span><img src="../../images/footer-icon/myIcon0.png" width="25"
                                                           height="25"/></span></div>
       </div>
     </div>
-    <div  class="product-item">
-      <div class="product-item-left">
-        <img src="../../images/classify/classify01.jpg" width="80" height="80"/>
-      </div>
-      <div class="product-item-right">
-        <div>dressbook韩国创意家用懒人叠衣板成人儿童衣服收纳神器防皱衬衣</div>
-        <div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span
-          style="color:#999;">销量: 22174 </span><span><img src="../../images/footer-icon/myIcon0.png" width="25"
-                                                          height="25"/></span></div>
-      </div>
-    </div>
-    <div  class="product-item">
-      <div class="product-item-left">
-        <img src="../../images/classify/classify01.jpg" width="80" height="80"/>
-      </div>
-      <div class="product-item-right">
-        <div>dressbook韩国创意家用懒人叠衣板成人儿童衣服收纳神器防皱衬衣</div>
-        <div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span
-          style="color:#999;">销量: 22174 </span><span><img src="../../images/footer-icon/myIcon0.png" width="25"
-                                                          height="25"/></span></div>
-      </div>
-    </div>
-    <div  class="product-item">
-      <div class="product-item-left">
-        <img src="../../images/classify/classify01.jpg" width="80" height="80"/>
-      </div>
-      <div class="product-item-right">
-        <div>dressbook韩国创意家用懒人叠衣板成人儿童衣服收纳神器防皱衬衣</div>
-        <div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span
-          style="color:#999;">销量: 22174 </span><span><img src="../../images/footer-icon/myIcon0.png" width="25"
-                                                          height="25"/></span></div>
-      </div>
-    </div>
-    <div  class="product-item">
-      <div class="product-item-left">
-        <img src="../../images/classify/classify01.jpg" width="80" height="80"/>
-      </div>
-      <div class="product-item-right">
-        <div>dressbook韩国创意家用懒人叠衣板成人儿童衣服收纳神器防皱衬衣</div>
-        <div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span
-          style="color:#999;">销量: 22174 </span><span><img src="../../images/footer-icon/myIcon0.png" width="18"
-                                                          height="18"/></span></div>
-      </div>
-    </div>
+    <!--<div  class="product-item">-->
+      <!--<div class="product-item-left">-->
+        <!--<img src="../../images/classify/classify01.jpg" width="80" height="80"/>-->
+      <!--</div>-->
+      <!--<div class="product-item-right">-->
+        <!--<div>dressbook韩国创意家用懒人叠衣板成人儿童衣服收纳神器防皱衬衣</div>-->
+        <!--<div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span-->
+          <!--style="color:#999;">销量: 22174 </span><span><img src="../../images/footer-icon/myIcon0.png" width="25"-->
+                                                          <!--height="25"/></span></div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div  class="product-item">-->
+      <!--<div class="product-item-left">-->
+        <!--<img src="../../images/classify/classify01.jpg" width="80" height="80"/>-->
+      <!--</div>-->
+      <!--<div class="product-item-right">-->
+        <!--<div>dressbook韩国创意家用懒人叠衣板成人儿童衣服收纳神器防皱衬衣</div>-->
+        <!--<div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span-->
+          <!--style="color:#999;">销量: 22174 </span><span><img src="../../images/footer-icon/myIcon0.png" width="25"-->
+                                                          <!--height="25"/></span></div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div  class="product-item">-->
+      <!--<div class="product-item-left">-->
+        <!--<img src="../../images/classify/classify01.jpg" width="80" height="80"/>-->
+      <!--</div>-->
+      <!--<div class="product-item-right">-->
+        <!--<div>dressbook韩国创意家用懒人叠衣板成人儿童衣服收纳神器防皱衬衣</div>-->
+        <!--<div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span-->
+          <!--style="color:#999;">销量: 22174 </span><span><img src="../../images/footer-icon/myIcon0.png" width="25"-->
+                                                          <!--height="25"/></span></div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div  class="product-item">-->
+      <!--<div class="product-item-left">-->
+        <!--<img src="../../images/classify/classify01.jpg" width="80" height="80"/>-->
+      <!--</div>-->
+      <!--<div class="product-item-right">-->
+        <!--<div>dressbook韩国创意家用懒人叠衣板成人儿童衣服收纳神器防皱衬衣</div>-->
+        <!--<div style="margin-top:10px;"><span style="color:red;">￥123.00</span> <span-->
+          <!--style="color:#999;">销量: 22174 </span><span><img src="../../images/footer-icon/myIcon0.png" width="18"-->
+                                                          <!--height="18"/></span></div>-->
+      <!--</div>-->
+    <!--</div>-->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ProductItem'
+  name: 'ProductItem',
+  props: ['product']
 }
 </script>
 
