@@ -3,22 +3,22 @@
     <ul class="classify-ul">
       <li class="classify-ul-li">
         <router-link to="/">
-          <img src="../../images/classify/classify01.jpg" width="100%" height="100%"/>
+          <img src="../../images/title/clothing-type-09.png" width="100%" height="100%"/>
         </router-link>
       </li>
       <li class="classify-ul-li">
         <router-link to="/">
-          <img src="../../images/classify/classify01.jpg" width="100%" height="100%"/>
+          <img src="../../images/title/clothing-type-10.png" width="100%" height="100%"/>
         </router-link>
       </li>
       <li class="classify-ul-li">
         <router-link to="/">
-          <img src="../../images/classify/classify01.jpg" width="100%" height="100%"/>
+          <img src="../../images/title/clothing-type-11.png" width="100%" height="100%"/>
         </router-link>
       </li>
       <li class="classify-ul-li">
         <router-link to="/">
-          <img src="../../images/classify/classify01.jpg" width="100%" height="100%"/>
+          <img src="../../images/title/clothing-type-12.png" width="100%" height="100%"/>
         </router-link>
       </li>
     </ul>
