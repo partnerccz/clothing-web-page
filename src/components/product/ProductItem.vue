@@ -1,16 +1,18 @@
 <template>
   <div>
-    <div  class="product-item">
-      <div class="product-item-left">
-        <img :src="product.img" width="80" height="80"/>
+    <router-link :to="{path: '/productDetail', query: {psId: product.psId, pId: product.pId}}" style="text-decoration: none;color:#333;">
+      <div  class="product-item">
+        <div class="product-item-left">
+          <img :src="product.img" width="80" height="80"/>
+        </div>
+        <div class="product-item-right">
+          <div  style="margin-top:5px; ">{{product.pName}}</div>
+          <div style="margin-top:10px; "><span style="color:red;">￥{{product.sell_price}}</span> <span
+            style="color:#999;">销量: {{product.total_sell_num}} </span><span style="position: absolute; right: 30px;z-index: 100;"><img src="../../images/order/buy-car-2.png" width="25"
+                                                            height="25"/></span></div>
+        </div>
       </div>
-      <div class="product-item-right">
-        <div  style="margin-top:5px; ">{{product.pName}}</div>
-        <div style="margin-top:10px; "><span style="color:red;">￥{{product.sell_price}}</span> <span
-          style="color:#999;">销量: {{product.total_sell_num}} </span><span style="position: absolute; right: 30px;"><img src="../../images/order/buy-car-2.png" width="25"
-                                                          height="25"/></span></div>
-      </div>
-    </div>
+    </router-link>
     <!--<div  class="product-item">-->
       <!--<div class="product-item-left">-->
         <!--<img src="../../images/classify/classify01.jpg" width="80" height="80"/>-->

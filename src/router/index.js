@@ -4,6 +4,8 @@ import Router from 'vue-router'
 
 const Home = resolve => require(['../components/Home.vue'], resolve)
 const Order = resolve => require(['../components/order/Index'], resolve)
+const ProductDetail = resolve => require(['../components/product/ProductDetail'], resolve)
+const CartProduct = resolve => require(['../components/cart/CartProduct'], resolve)
 
 Vue.use(Router)
 
@@ -23,6 +25,14 @@ export default new Router({
       path: '/order', // 订单
       name: 'Order',
       component: Order
+    }, {
+      path: '/productDetail',
+      name: 'ProductDetail',
+      component: ProductDetail
+    }, {
+      path: '/cartProduct',
+      name: 'CartProduct',
+      component: CartProduct
     }
   ]
 })

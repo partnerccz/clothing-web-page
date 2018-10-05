@@ -7,5 +7,5 @@ module.exports = merge(prodEnv, {
   DEV_PORT: 8012,
   DEV_HOST: 'localhost',
   // 后端服务的访问地址，用于代理ajax数据请求
-  BACKEND_SERVER: 'http://localhost:8011'
+  BACKEND_SERVER: 'http://localhost:8013'
 })

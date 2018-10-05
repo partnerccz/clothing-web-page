@@ -7,8 +7,8 @@
         <classify></classify>
         <product-item :product="product" v-for="product in products" :key="product.id"></product-item>
       </mt-tab-container-item>
-      <mt-tab-container-item id="buyCar">
-        byCfasdfa
+      <mt-tab-container-item id="buyCar" >
+        <cart-product :cart-product="cartProduct" v-for="cartProduct in cartProducts" :key="cartProduct.cart_id"></cart-product>
       </mt-tab-container-item>
       <mt-tab-container-item id="order">
         <order-title></order-title>
@@ -43,6 +43,7 @@ import Classify from './home/Classify'
 import ProductItem from './product/ProductItem'
 import OrderTitle from './order/Title'
 import OrderStatus from './order/Status'
+import CartProduct from './cart/CartProduct'
 
 export default {
   name: 'Home',
@@ -53,32 +54,39 @@ export default {
     Classify,
     ProductItem,
     OrderTitle,
-    OrderStatus
+    OrderStatus,
+    CartProduct
   },
   data: function () {
     return {
       selected: 'home2',
       banners: {},
-      products: []
+      products: [],
+      cartProducts: []
     }
   },
   methods: {
     getBanner: function () {
       this.$http.post('/banner/getBanners', {groupKey: 'GROUP_HOME'}).then((response) => {
-        console.log(response)
         this.banners = response.data
       })
     },
     getProducts: function () {
       this.$http.post('/product/getProductPage', {pageSize: 10, pageNum: 1}).then((response) => {
-        console.log(response)
         this.products = response.data.list
+      })
+    },
+    getCartProduct: function () {
+      this.$http.get('/cartProduct/getCartProductByMid', {params: {pageSize: 10, pageNum: 1, memberId: 1}}).then((response) => {
+        console.log(response)
+        this.cartProducts = response.data.list
       })
     }
   },
   mounted: function () {
     this.getBanner()
     this.getProducts()
+    this.getCartProduct()
   }
 }
 </script>

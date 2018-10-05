@@ -3,22 +3,22 @@
     <ul class="classify-ul">
       <li class="classify-ul-li">
         <router-link to="/">
-          <img src="../../images/title/clothing-type-09.png" width="100%" height="100%"/>
+          <img src="https://img.alicdn.com/imgextra/i4/1966626512/O1CN011xyXdycvnGQrbrh_!!1966626512.jpg_430x430q90.jpg" width="100%" height="100%"/>
         </router-link>
       </li>
       <li class="classify-ul-li">
         <router-link to="/">
-          <img src="../../images/title/clothing-type-10.png" width="100%" height="100%"/>
+          <img src="//img.alicdn.com/imgextra/i1/1966626512/TB2qu5GwsUrBKNjSZPxXXX00pXa_!!1966626512.jpg_430x430q90.jpg" width="100%" height="100%"/>
         </router-link>
       </li>
       <li class="classify-ul-li">
         <router-link to="/">
-          <img src="../../images/title/clothing-type-11.png" width="100%" height="100%"/>
+          <img src="https://img.alicdn.com/imgextra/i3/2946751039/TB2tryjX6rguuRjy0FeXXXcbFXa_!!2946751039-0-item_pic.jpg_430x430q90.jpg" width="100%" height="100%"/>
         </router-link>
       </li>
       <li class="classify-ul-li">
         <router-link to="/">
-          <img src="../../images/title/clothing-type-12.png" width="100%" height="100%"/>
+          <img src="//gd2.alicdn.com/imgextra/i4/1850048901/TB26DyusrZnBKNjSZFKXXcGOVXa_!!1850048901.jpg_400x400.jpg" width="100%" height="100%"/>
         </router-link>
       </li>
     </ul>
