@@ -1,7 +1,7 @@
 <template>
   <div style="padding-bottom: 50px;">
-  <div class="buy-footer">
-    <div class="buy-common buy-home">首页</div>
+  <div class="buy-footer" style="position: fixed;left: 0;bottom:0;">
+    <div class="buy-common buy-home" style="background-color: white;"><router-link to="/" style="text-decoration: none;color:#333;">首页</router-link></div>
     <div class="buy-common buy-none"></div>
     <div class="buy-common buy-car" @click="addCartProduct">加入购物车</div>
     <div class="buy-common buy-buy">立即购买</div>
@@ -12,6 +12,7 @@
 <script>
 export default {
   name: 'cart-bottom',
+  components: {},
   props: ['addUrl', 'params'],
   methods: {
     addCartProduct: function () {
